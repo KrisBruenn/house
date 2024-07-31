@@ -1,0 +1,33 @@
+{
+	"events": [
+		    {
+		        "0": "A ghost shouts Boo! and, cackling, disappears.",
+			"1": "A black cat hisses and vanishes."
+		    }
+	],
+
+	"rooms": [
+		{
+			"name": "porch",
+			"doors": ["0"],
+			"furniture": ["bench"]
+		},
+		{
+			"name": "parlor",
+			"doors": ["0", "1"],
+			"furniture": ["piano", "sofa", "chair", "lamp", "bookcase"]
+		}
+	],
+
+	"doors": {
+			"0": { 
+				"name": "front door",
+				"description": "faded red door with broken doorbell"
+			},
+			"1": {
+				"name": "dining room door",
+				"description": "white paneled door"
+			}
+	}
+
+}
