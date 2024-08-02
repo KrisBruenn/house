@@ -103,9 +103,13 @@ let fName = arguments[1]
 let x = try readJSONFile(forName: fName)
 let xRooms = x["rooms"] as! [Any]
 numberOfRooms = xRooms.count - 1
+
 let xEvents = x["events"] as! [Any]
 let myEvents = xEvents[0] as! [String: String]
 numberOfEvents = myEvents.count - 1
+
+let xTransitions = x["transitions"] as! [Any]
+let myTransitions = xTransitions[0] as! [String: Any]
 
 // loop until user selects "quit" choice
 while (true) {
@@ -128,7 +132,12 @@ while (true) {
         break
     }
     else { // navigate house...
-        current = Int.random(in: 0 ... numberOfRooms)
-        // print(current)
+        print("navigate")
+        let theTransition = myTransitions[String(current)]
+        print(theTransition)
+        let getTransition = theTransition as! [String: Any]
+        let xcurrent = getTransition[String(cz)] as! String
+        print(xcurrent)
+        current = Int(xcurrent) ?? 0
     }
 } 

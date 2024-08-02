@@ -2,7 +2,41 @@
 	"events": [
 		    {
 		        "0": "A ghost shouts Boo! and, cackling, disappears.",
-			"1": "A black cat hisses and vanishes."
+			"1": "A black cat hisses and vanishes.",
+			"2": "You hear an eerie howl.",
+			"3": "You hear footsteps overhead.",
+			"4": "A bat flies around your head.",
+			"5": "You smell a foul stench.",
+			"6": "Something grabs your ankle, but no one is there."
+		    }
+	],
+
+	"transitions": [
+		    {
+			"0" : { "0": "1"},
+			"1" : { "0": "0",
+				"1": "2"
+			      },
+			"2" : { "0" : "1",
+				"1" : "3"
+			      },
+			"3" : { "0" : "2",
+				"1" : "4",
+				"2" : "5"
+			      },
+			"4" : { "0" : "3"
+			      },
+			"5" : { "0" : "3",
+				"1" : "6"
+			      },
+			"6" : { "0" : "5",
+				"1" : "7",
+				"2" : "8"
+			      },
+			"7" : { "0": "6"
+			      },
+			"8" : { "0": "6"
+			      }
 		    }
 	],
 
@@ -16,6 +50,41 @@
 			"name": "parlor",
 			"doors": ["0", "1"],
 			"furniture": ["piano", "sofa", "chair", "lamp", "bookcase"]
+		},
+		{
+			"name": "dining room",
+			"doors": ["1", "2"],
+			"furniture": ["table", "chairs", "sideboard"]
+		},
+		{
+			"name": "kitchen",
+			"doors": ["2", "3", "4"],
+			"furniture": ["butcher block", "oven", "ice box"]
+		},
+		{
+			"name": "pantry",
+			"doors": ["3"],
+			"furniture": ["empty shelves"]
+		},
+		{
+			"name": "stairwell",
+			"doors": ["4", "5"],
+			"furniture": ["banister"]
+		},
+		{
+			"name": "hallway",
+			"doors": ["5", "6", "7"],
+			"furniture": ["sideboard"]
+		},
+		{
+			"name": "bed room",
+			"doors": ["6"],
+			"furniture": ["bed", "drawers", "stopped clock"]
+		},
+		{
+			"name": "bath room",
+			"doors": ["7"],
+			"furniture": ["toilet", "bath tub", "drawers", "sink", "hamper"]
 		}
 	],
 
@@ -26,6 +95,30 @@
 			},
 			"1": {
 				"name": "dining room door",
+				"description": "white paneled door"
+			},
+			"2": { 
+				"name": "kitchen door",
+				"description": "white paneled door"
+			},
+			"3": {
+				"name": "pantry door",
+				"description": "white paneled door"
+			},
+			"4": {
+				"name": "back door",
+				"description": "white paneled door"
+			},
+			"5": {
+				"name": "upstairs hall door",
+				"description": "white paneled door"
+			},
+			"6": {
+				"name": "bed room door",
+				"description": "white paneled door"
+			},
+			"7": {
+				"name": "bath room door",
 				"description": "white paneled door"
 			}
 	}
