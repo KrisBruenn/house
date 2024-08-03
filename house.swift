@@ -132,12 +132,12 @@ while (true) {
         break
     }
     else { // navigate house...
-        print("navigate")
+        // print("navigate")
         let theTransition = myTransitions[String(current)]
-        print(theTransition)
+        // print(theTransition)
         let getTransition = theTransition as! [String: Any]
         let xcurrent = getTransition[String(cz)] as! String
-        print(xcurrent)
+        // print(xcurrent)
         current = Int(xcurrent) ?? 0
     }
 } 
